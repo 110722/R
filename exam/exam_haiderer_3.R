@@ -118,6 +118,9 @@ getCarbonBalance <- function(x, y, cumulate = "co2") {
   }
   mydf[nrow(mydf) + 1, ] <- balval
   rownames(mydf)[nrow(mydf)] <- "carbonbalance"
+  for (i in 1:ncol(mydf)){
+    mydf[,i] <- unlist(mydf[,i])
+  }
   return(mydf)
 }
 
@@ -125,6 +128,20 @@ getCarbonBalance <- function(x, y, cumulate = "co2") {
 
 
 ##############################################
+
+saveCarbonBalance <- function(x,y) {
+              write.table(x,
+                          file = y,
+                          col.names= colnames(x),
+                          quote= F,
+                          sep=",",
+                          dec=".",
+                          row.names= rownames(x))
+}
+
+
+###############################################
+
 
 
 
@@ -140,7 +157,7 @@ a_wo_outlier <- removeOutliers(a_d)
 a_means <- getBatchMeans(a_wo_outlier)
 a_sd <- getBatchSd(a_wo_outlier)
 a_carbon_balance <- getCarbonBalance(a_wo_outlier, a_cd, cumulate="co2")
-# saveCarbonBalance(a_carbon_balance, paste(output_dir, "a_carbon_balance.csv", sep = ""))
+saveCarbonBalance(a_carbon_balance, paste(output_dir, "a_carbon_balance.csv", sep = ""))
 # plot_fermdata(a_wo_outlier, cumulate="co2")
 # plot_fermdata(a_wo_outlier, cumulate="co2", type = "png",
 #               filename = paste(output_dir, "a.png", sep = ""), width = 1200,
@@ -153,7 +170,7 @@ b_wo_outlier <- removeOutliers(b_d)
 b_means <- getBatchMeans(b_wo_outlier)
 b_sd <- getBatchSd(b_wo_outlier)
 b_carbon_balance <- getCarbonBalance(b_wo_outlier, b_cd, cumulate="co2")
-# saveCarbonBalance(b_carbon_balance, paste(output_dir, "b_carbon_balance.csv", sep = ""))
+saveCarbonBalance(b_carbon_balance, paste(output_dir, "b_carbon_balance.csv", sep = ""))
 # plot_fermdata(b_wo_outlier, cumulate="co2")
 # plot_fermdata(b_wo_outlier, cumulate="co2", type = "jpeg",
 #               filename = paste(output_dir, "b.jpg", sep = ""), width = 1600,
