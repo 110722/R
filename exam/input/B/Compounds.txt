@@ -1,0 +1,9 @@
+molweight	carbons
+glucose	180.18	6
+biomass	27.63	1
+ethanol	46.08	2
+pyruvate	87	3
+acetate	59	2
+co2	44.01	1
+glycerin	92.1	3
+citrate	192	6
