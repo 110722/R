@@ -51,6 +51,9 @@ getBatchMeans <- function(x, na.rm =T){
   test <- getTestMeans(x)
   test2 <- t(data.frame(test))
   rownames(test2) <- NULL
+  test2 <- as.data.frame(test2)
+  rownames(test2) <- unlist(test2$hour)
+  test2$hour <- NULL
   return(test2)
 }
 
@@ -72,6 +75,10 @@ getBatchSd <- function(x, na.rm =T){
   test <- getTestSd(x)
   test2 <- t(data.frame(test))
   rownames(test2) <- NULL
+  test2 <- as.data.frame(test2)
+  x_means <- getBatchMeans(x)
+  rownames(test2) <- rownames(x_means)
+  test2$hour <- NULL
   return(test2)
 }
 
@@ -141,6 +148,41 @@ saveCarbonBalance <- function(x,y) {
 
 
 ###############################################
+# plot_fermdata(a_wo_outlier, cumulate="co2")
+
+# x_Achse: hour
+# y_Achse: gramm (a_means/a_sd pfeile)
+originalpar <- par()
+plot(rownames(b_means), b_means$glucose)
+
+
+str(a_means)
+
+
+###########################################
+
+
+
+plot_fermdata <- function(x, cumulate="co2", type=NA, filename=NA, width=480,
+                          height=480, res=72){
+  x_means <- getBatchMeans(x)
+  x_means[cumulate] <- cumsum(x_means[cumulate]) 
+  x_sd <- getBatchSd(x)
+  
+  plot(rownames(x_means), x_means$glucose,
+       type="o", ylab = "[g]", xlab= "hours")
+  cls <- 1:length(colnames(x_means))
+  for (i in cls){
+  lines(rownames(x_means), x_means[,i], col=i, type="o")
+   }
+}
+  
+
+
+plot_fermdata(a_wo_outlier, cumulate="co2")
+
+
+
 
 
 
