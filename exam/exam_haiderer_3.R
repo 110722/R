@@ -86,6 +86,9 @@ getBatchSd <- function(x, na.rm =T){
 
 
 #######################################################
+###todo:
+#carbonbalance
+    
 
 
 getCarbonBalance <- function(x, y, cumulate = "co2") {
@@ -163,23 +166,78 @@ str(a_means)
 
 
 
-plot_fermdata <- function(x, cumulate="co2", type=NA, filename=NA, width=480,
-                          height=480, res=72){
+only_plot_fermdata <- function(x, cumulate="co2", cex=0.5){
   x_means <- getBatchMeans(x)
   x_means[cumulate] <- cumsum(x_means[cumulate]) 
   x_sd <- getBatchSd(x)
+  gHigh <- x_means + abs(x_sd)
+  gLow <- x_means - abs(x_sd)
   
   plot(rownames(x_means), x_means$glucose,
-       type="o", ylab = "[g]", xlab= "hours")
-  cls <- 1:length(colnames(x_means))
+       type="l", ylab = "[g]", xlab= "hours", las=1, ylim=c(min(gLow), max(gHigh)),
+       main="Batch Data")
+  cls <- 2:length(colnames(x_means))
   for (i in cls){
-  lines(rownames(x_means), x_means[,i], col=i, type="o")
-   }
+  lines(rownames(x_means), x_means[,i], col=i, type="l")
+  }
+  legend("topright",
+         legend= colnames(x_means),
+         col= 1:length(colnames(x_means)),
+         lwd=1,
+         title ="substances",
+         horiz=F,
+         title.col=1,
+         ncol=4,
+         cex=cex)
+  clrs <- 1:length(colnames(x_means))
+  for (i in 1:length(colnames(x_means))){
+  arrows((as.numeric(rownames(x_means))), gHigh[,i], (as.numeric(rownames(x_means))), gLow[,i],
+         col=clrs[i],
+         angle=90,
+         length=0.025,
+         code=3)
+  }
+  # export filename, type =type, width=width, height=height
 }
-  
+
+plot_fermdata <-
+  function(x,
+           cumulate = "co2",
+           type = NA,
+           filename = NA,
+           width = 480,
+           height = 480,
+           res = 72) {
+    only_plot_fermdata(x = x, cumulate = cumulate)
+    if (!(is.na(type))){
+    if (type=="png") {
+      cex<-1.5
+    png(filename,
+           width = width,
+           height = height,
+           res = res)
+      only_plot_fermdata(x = x, cumulate = cumulate, cex=cex)
+      dev.off() 
+      } 
+    if (type=="jpeg"){
+      cex<-1.5
+      jpeg(filename,
+          width = width,
+          height = height,
+          res = res)
+      only_plot_fermdata(x = x, cumulate = cumulate, cex=cex)
+      dev.off()
+    } else { print("Please choose png or jpeg")}  }
+
+    
+    
+  }
 
 
-plot_fermdata(a_wo_outlier, cumulate="co2")
+
+
+
+
 
 
 
@@ -200,10 +258,10 @@ a_means <- getBatchMeans(a_wo_outlier)
 a_sd <- getBatchSd(a_wo_outlier)
 a_carbon_balance <- getCarbonBalance(a_wo_outlier, a_cd, cumulate="co2")
 saveCarbonBalance(a_carbon_balance, paste(output_dir, "a_carbon_balance.csv", sep = ""))
-# plot_fermdata(a_wo_outlier, cumulate="co2")
-# plot_fermdata(a_wo_outlier, cumulate="co2", type = "png",
-#               filename = paste(output_dir, "a.png", sep = ""), width = 1200,
-#               height = 800)
+plot_fermdata(a_wo_outlier, cumulate="co2")
+plot_fermdata(a_wo_outlier, cumulate="co2", type = "png",
+               filename = paste(output_dir, "a.png", sep = ""), width = 1200,
+               height = 800)
 #
 b <- paste(input_dir, "B/B", 1:8, ".txt", sep="")
 b_d <- readBatchDatasets(b)
@@ -213,7 +271,7 @@ b_means <- getBatchMeans(b_wo_outlier)
 b_sd <- getBatchSd(b_wo_outlier)
 b_carbon_balance <- getCarbonBalance(b_wo_outlier, b_cd, cumulate="co2")
 saveCarbonBalance(b_carbon_balance, paste(output_dir, "b_carbon_balance.csv", sep = ""))
-# plot_fermdata(b_wo_outlier, cumulate="co2")
-# plot_fermdata(b_wo_outlier, cumulate="co2", type = "jpeg",
-#               filename = paste(output_dir, "b.jpg", sep = ""), width = 1600,
-#               height = 1000, res = 120)
+plot_fermdata(b_wo_outlier, cumulate="co2")
+plot_fermdata(b_wo_outlier, cumulate="co2", type = "jpeg",
+               filename = paste(output_dir, "b.jpg", sep = ""), width = 1600,
+               height = 1000, res = 120)
