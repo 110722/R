@@ -152,15 +152,9 @@ saveCarbonBalance <- function(x,y) {
 
 
 ###############################################
-# plot_fermdata(a_wo_outlier, cumulate="co2")
 
-# x_Achse: hour
-# y_Achse: gramm (a_means/a_sd pfeile)
 originalpar <- par()
-plot(rownames(b_means), b_means$glucose)
 
-
-str(a_means)
 
 
 ###########################################
@@ -198,8 +192,8 @@ only_plot_fermdata <- function(x, cumulate="co2", cex=0.5){
          length=0.025,
          code=3)
   }
-  # export filename, type =type, width=width, height=height
 }
+
 
 plot_fermdata <-
   function(x,
@@ -228,22 +222,9 @@ plot_fermdata <-
           res = res)
       only_plot_fermdata(x = x, cumulate = cumulate, cex=cex)
       dev.off()
-    } else { print("Please choose png or jpeg")}  }
-
-    
-    
+    } else { print("Please choose png or jpeg")}  
   }
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
