@@ -86,56 +86,17 @@ getBatchSd <- function(x, na.rm =T){
 
 
 #######################################################
-###todo:
-#carbonbalance
-
-    
 
 
-getCarbonBalance <- function(x, y, cumulate = "co2") {
-  x_means <- getBatchMeans(x)
-  mylist <- list()
-  for (i in colnames(x_means)) {
-    if (i == cumulate) {
-      x_balance <-
-        cumsum(((x_means[, i] / y[i, "molweight"]) * y[i, "carbons"]))
-    }
-    else {
-      x_balance <-
-        as.numeric(((x_means[, i] / y[i, "molweight"]) * y[i, "carbons"]))
-    }
-    mylist <- append(mylist, as.numeric(x_balance))
-  }
-  mymatrix <- matrix(mylist, ncol = ncol(x_means), nrow = nrow(x_means))
-  mydf <- as.data.frame(t(mymatrix), stringsAsFactors = F)
-  rownames(mydf) <- colnames(x_means)
-  mydf <- mydf[-1, ]
-  colnames(mydf) <- x_means[, "hour"]
-  
-  # carbonsum Zeile anfügen
-  summi <- list()
-  for (i in colnames(mydf)) {
-    summi[i] <- sum(unlist(mydf[, i]))
-  }
-  mydf[nrow(mydf) + 1, ] <- summi
-  rownames(mydf)[nrow(mydf)] <- "carbonsum"
-  
-  # carbonbalance anfügen:
-  str(unlist(mydf["carbonsum", 1]))
-  refval <- unlist(mydf["carbonsum", 1])
-  balval <- list()
-  for (i in colnames(mydf)) {
-    balval[i] <- (unlist(mydf["carbonsum", i])) / refval
-  }
-  mydf[nrow(mydf) + 1, ] <- balval
-  rownames(mydf)[nrow(mydf)] <- "carbonbalance"
-  for (i in 1:ncol(mydf)){
-    mydf[,i] <- unlist(mydf[,i])
-  }
-  return(mydf)
+getCarbonBalance <- function(x,y,cumulate ="co2"){
+  x_m <- getBatchMeans(x)
+  x_m[cumulate] <- cumsum(x_m[cumulate])
+  for (i in ncol(x_m)){
+   x_m[,i] <- ((x_m[, i] / y[i, "molweight"]) * y[i, "carbons"])
+  } 
+  return(x_m)
 }
-
-
+    
 
 
 ##############################################
