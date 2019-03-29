@@ -205,7 +205,8 @@ plot_fermdata(a_wo_outlier, cumulate="co2")
 plot_fermdata(a_wo_outlier, cumulate="co2", type = "png",
                filename = paste(output_dir, "a.png", sep = ""), width = 1200,
                height = 800)
-#
+
+
 b <- paste(input_dir, "B/B", 1:8, ".txt", sep="")
 b_d <- readBatchDatasets(b)
 b_cd <- readCompoundData(paste(input_dir, "B/Compounds.txt", sep = ""))
