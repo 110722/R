@@ -1,11 +1,12 @@
 Package: BatchFermentationAnalyser
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Analyses Batch Fermentation Data
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Claudia Haiderer
+Maintainer: The package maintainer <claudia.haiderer@gmail.com>
+Description: Package needs 2 types of Input Data and has to run same folder with 
+input\ & output\.
+    Calculates means, standard deviation and plots data of a given batch. 
+License: GPL
 Encoding: UTF-8
 LazyData: true

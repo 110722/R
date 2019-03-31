@@ -57,7 +57,7 @@ getBatchMeans <- function(x, na.rm =T){
   return(test2)
 }
 
-getBatchMeans(a_d)
+
 
 
 ##########################################
@@ -93,10 +93,10 @@ getCarbonBalance <- function(x,y,cumulate ="co2"){
   x_m[cumulate] <- cumsum(x_m[cumulate])
   for (i in ncol(x_m)){
    x_m[,i] <- ((x_m[, i] / y[i, "molweight"]) * y[i, "carbons"])
-  } 
+  }
   return(x_m)
 }
-    
+
 
 
 ##############################################
@@ -124,11 +124,11 @@ originalpar <- par()
 
 only_plot_fermdata <- function(x, cumulate="co2", cex=0.5){
   x_means <- getBatchMeans(x)
-  x_means[cumulate] <- cumsum(x_means[cumulate]) 
+  x_means[cumulate] <- cumsum(x_means[cumulate])
   x_sd <- getBatchSd(x)
   gHigh <- x_means + abs(x_sd)
   gLow <- x_means - abs(x_sd)
-  
+
   plot(rownames(x_means), x_means$glucose,
        type="l", ylab = "[g]", xlab= "hours", las=1, ylim=c(min(gLow), max(gHigh)),
        main="Batch Data")
@@ -173,8 +173,8 @@ plot_fermdata <-
            height = height,
            res = res)
       only_plot_fermdata(x = x, cumulate = cumulate, cex=cex)
-      dev.off() 
-      } 
+      dev.off()
+      }
     if (type=="jpeg"){
       cex<-1.5
       jpeg(filename,
@@ -183,7 +183,7 @@ plot_fermdata <-
           res = res)
       only_plot_fermdata(x = x, cumulate = cumulate, cex=cex)
       dev.off()
-    } else { print("Please choose png or jpeg")}  
+    } else { print("Please choose png or jpeg")}
   }
 }
 
