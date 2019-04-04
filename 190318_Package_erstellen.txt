@@ -1,0 +1,28 @@
+Packageerstellung Schritt für Schritt
+
+1. rstudio
+     Menü File -> new Project... -> new Directory -> R Package
+       Ordner auswählen
+       Packagenamen vergeben
+2. Im Ordner R hello.R löschen
+3. Im Ordner man hello.Rd löschen
+4. Datei NAMESPACE löschen
+5. Datei DESCRIPTION anpassen
+6. Im Ordner R neue R Dateien mit Funktionen schreiben
+   - Jede Funktion im Roxygen Format dokumentieren, dazu
+        Menü Code -> Insert Roxygen Skeleton
+   - alle Parameter mit @param dokumentieren
+   - @examples müssen ausführbar sein, sonst kann package nicht erstellt werden
+   - @export muss bei jeder aufrufbaren Funktion gesetzt sein
+   - @importFrom packagename funktion1 funktion2 funktion3 setzen, falls Funktionen aus Fremdpaketen verwendet werden
+7. Funktionsnamen von Hilfsfunktionen starten mit Punkt und werden NICHT im Roxygen Format dokumentiert
+8. Fremdpakete in der DESCRIPTION Datei mit Import Zeile einfügen
+9. Beispieldaten:
+   - Ordner data erstellen (manuell)
+   - Daten im .rda Format innerhalb von data abspeichern
+   - Daten in einem R Skript im R Ordner im Roxygen Format dokumentieren
+10. Paket mit Menü
+   Build -> Configure Build Tools...
+      Setze Markierung von "Generate documentation with Roxygen"
+      Markiere Build & Reload (für Roxygen)
+   Build -> Check Package prüfen

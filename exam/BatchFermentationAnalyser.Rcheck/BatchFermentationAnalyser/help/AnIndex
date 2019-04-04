@@ -1,0 +1,11 @@
+getBatchMeans	getBatchMeans
+getBatchSd	getBatchSd
+getCarbonBalance	getCarbonBalance
+getTestMeans	getTestMeans
+getTestSd	getTestSd
+only_plot_fermdata	only_plot_fermdata
+plot_fermdata	plot_fermdata
+readBatchDatasets	readBatchDatasets
+readCompoundData	readCompoundData
+removeOutliers	removeOutliers
+saveCarbonBalance	saveCarbonBalance

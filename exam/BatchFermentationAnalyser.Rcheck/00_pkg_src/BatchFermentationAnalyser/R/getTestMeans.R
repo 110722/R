@@ -11,7 +11,7 @@
 #' getTestMeans(a_wo_outlier)
 #'
 
-getTestMeans <- function(x, na.rm = T) {
+getTestMeans <- function(x, na.rm = TRUE) {
   for (i in 1:length(x)) {
     x[[i]] <- apply(x[[i]], 2, mean, na.rm = na.rm)
   }

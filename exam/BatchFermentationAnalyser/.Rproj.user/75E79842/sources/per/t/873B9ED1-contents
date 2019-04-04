@@ -1,0 +1,21 @@
+#' getTestSd
+#'
+#' Auxiliary Function for getBatchSd.
+#' @param a list of dataframes
+#' @param na.rm
+#'
+#' @return a dataframe
+#' @export
+#'
+#' @examples
+#' getTestSd(a_wo_outlier)
+
+getTestSd <- function(x, na.rm = TRUE) {
+  for (i in 1:length(x)) {
+    x[[i]] <- apply(x[[i]], 2, sd, na.rm = na.rm)
+  }
+  return(x)
+}
+
+
+

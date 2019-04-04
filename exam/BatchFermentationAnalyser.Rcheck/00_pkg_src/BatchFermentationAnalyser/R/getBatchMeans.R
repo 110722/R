@@ -11,7 +11,7 @@
 #' @examples
 #' getBatchMeans(a_wo_outlier)
 
-getBatchMeans <- function(x, na.rm =T){
+getBatchMeans <- function(x, na.rm =TRUE){
   test <- getTestMeans(x)
   test2 <- t(data.frame(test))
   rownames(test2) <- NULL

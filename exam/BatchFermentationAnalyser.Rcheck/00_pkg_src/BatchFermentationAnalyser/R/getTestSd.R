@@ -10,7 +10,7 @@
 #' @examples
 #' getTestSd(a_wo_outlier)
 
-getTestSd <- function(x, na.rm = T) {
+getTestSd <- function(x, na.rm = TRUE) {
   for (i in 1:length(x)) {
     x[[i]] <- apply(x[[i]], 2, sd, na.rm = na.rm)
   }

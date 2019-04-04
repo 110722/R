@@ -11,6 +11,7 @@ License: GPL
 Encoding: UTF-8
 LazyData: true
 Import: graphics (>= 3.5)
-Import: grDevices (>= 3.5)
-Import: stats (>= 3.5)
-Import: utils (>= 3.5)
+        grDevices (>= 3.5)
+        stats (>= 3.5)
+        utils (>= 3.5)
+RoxygenNote: 6.1.1

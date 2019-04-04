@@ -10,6 +10,8 @@ Description: Package needs 2 types of Input Data and has to run same folder with
 License: GPL
 Encoding: UTF-8
 LazyData: true
-Import: utils (>= 3.5)
+Import: graphics (>= 3.5) grDevices (>= 3.5) stats (>= 3.5) utils (>=
+        3.5)
+RoxygenNote: 6.1.1
 NeedsCompilation: no
-Packaged: 2019-04-04 12:52:38 UTC; user
+Packaged: 2019-04-04 14:48:07 UTC; user

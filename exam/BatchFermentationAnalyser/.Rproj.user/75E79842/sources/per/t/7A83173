@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554389254579.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3196188006",
+    "id" : "7A83173",
+    "lastKnownWriteTime" : 1554389262,
+    "last_content_update" : 1554389262262,
+    "path" : "C:/Users/user/Desktop/VM-Zeug/sem2/R/exam/BatchFermentationAnalyser/R/getTestMeans.R",
+    "project_path" : "R/getTestMeans.R",
+    "properties" : {
+        "cursorPosition" : "13,40",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

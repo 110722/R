@@ -12,7 +12,7 @@
 #' @examples
 #' getBatchSd(a_wo_outlier)
 
-getBatchSd <- function(x, na.rm =T){
+getBatchSd <- function(x, na.rm =TRUE){
   test <- getTestSd(x)
   test2 <- t(data.frame(test))
   rownames(test2) <- NULL
