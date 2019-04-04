@@ -7,9 +7,9 @@
 saveCarbonBalance(x, y)
 }
 \arguments{
-\item{a}{dataframe}
+\item{x}{a dataframe}
 
-\item{a}{path}
+\item{y}{a path}
 }
 \value{
 a .csv

@@ -3,7 +3,7 @@
 #' reads a file containing the compound data
 #' @param a file
 #'
-#' @return a dataframe
+#' @return x a dataframe
 #' @export
 #'
 #' @examples

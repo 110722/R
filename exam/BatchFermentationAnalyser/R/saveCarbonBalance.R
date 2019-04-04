@@ -1,8 +1,8 @@
 #' saveCarbonBalance
 #'
 #' Function to save a dataframe as a csv, sep="," and dec="."
-#' @param a dataframe
-#' @param a path
+#' @param x a dataframe
+#' @param y a path
 #'
 #' @return a .csv
 #' @export

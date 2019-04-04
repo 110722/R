@@ -110,61 +110,9 @@ getTestSd
     Name: 'na.rm' Code: T Docs: TRUE
 
 * checking Rd \usage sections ... WARNING
-Undocumented arguments in documentation object 'getBatchMeans'
-  'x'
-Documented arguments not in \usage in documentation object 'getBatchMeans':
-  'list'
-
-Undocumented arguments in documentation object 'getBatchSd'
-  'x'
-Documented arguments not in \usage in documentation object 'getBatchSd':
-  'list'
-
-Undocumented arguments in documentation object 'getCarbonBalance'
-  'x' 'y'
-Documented arguments not in \usage in documentation object 'getCarbonBalance':
-  'list'
-
-Undocumented arguments in documentation object 'getTestMeans'
-  'x'
-Documented arguments not in \usage in documentation object 'getTestMeans':
-  'list'
-
-Undocumented arguments in documentation object 'getTestSd'
-  'x'
-Documented arguments not in \usage in documentation object 'getTestSd':
-  'a'
-
-Undocumented arguments in documentation object 'only_plot_fermdata'
-  'x' 'cumulate'
-Documented arguments not in \usage in documentation object 'only_plot_fermdata':
-  'list'
-
-Undocumented arguments in documentation object 'plot_fermdata'
-  'x' 'cumulate' 'type' 'filename' 'width' 'height'
-Documented arguments not in \usage in documentation object 'plot_fermdata':
-  'list'
-
-Undocumented arguments in documentation object 'readBatchDatasets'
-  'x'
-Documented arguments not in \usage in documentation object 'readBatchDatasets':
-  'A'
-
 Undocumented arguments in documentation object 'readCompoundData'
   'x'
 Documented arguments not in \usage in documentation object 'readCompoundData':
-  'a'
-
-Undocumented arguments in documentation object 'removeOutliers'
-  'x'
-Documented arguments not in \usage in documentation object 'removeOutliers':
-  'a'
-
-Undocumented arguments in documentation object 'saveCarbonBalance'
-  'x' 'y'
-Duplicated \argument entries in documentation object 'saveCarbonBalance':
-  'a'
-Documented arguments not in \usage in documentation object 'saveCarbonBalance':
   'a'
 
 Functions with \usage entries need to have the appropriate \alias
@@ -179,9 +127,6 @@ Argument items with no description in Rd object 'getBatchMeans':
 Argument items with no description in Rd object 'getBatchSd':
   'na.rm'
 
-Argument items with no description in Rd object 'getCarbonBalance':
-  'cumulate'
-
 Argument items with no description in Rd object 'getTestMeans':
   'na.rm'
 
@@ -190,9 +135,6 @@ Argument items with no description in Rd object 'getTestSd':
 
 Argument items with no description in Rd object 'only_plot_fermdata':
   'cex'
-
-Argument items with no description in Rd object 'plot_fermdata':
-  'res'
 
 Argument items with no description in Rd object 'removeOutliers':
   'na.rm'

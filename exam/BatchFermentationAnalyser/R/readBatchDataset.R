@@ -3,7 +3,7 @@
 #' reads List with input-filnames and gets content of these files in a list of
 #' dataframes. Outputs a List of dataframes.
 #'
-#' @param A vector of filenames
+#' @param x a vector of filenames
 #'
 #' @return A list of dataframes
 #' @export

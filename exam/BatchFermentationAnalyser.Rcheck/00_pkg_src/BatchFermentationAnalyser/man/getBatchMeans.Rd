@@ -7,9 +7,9 @@
 getBatchMeans(x, na.rm = TRUE)
 }
 \arguments{
-\item{na.rm}{}
+\item{x}{a list of dataframes}
 
-\item{list}{of dataframes}
+\item{na.rm}{}
 }
 \value{
 dataframe with batch-means

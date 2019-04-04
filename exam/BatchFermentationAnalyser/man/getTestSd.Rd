@@ -7,9 +7,9 @@
 getTestSd(x, na.rm = TRUE)
 }
 \arguments{
-\item{na.rm}{}
+\item{x}{a list of dataframes}
 
-\item{a}{list of dataframes}
+\item{na.rm}{}
 }
 \value{
 a dataframe

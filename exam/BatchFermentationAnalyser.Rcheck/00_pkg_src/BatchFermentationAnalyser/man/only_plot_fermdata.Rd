@@ -7,9 +7,11 @@
 only_plot_fermdata(x, cumulate = "co2", cex = 0.5)
 }
 \arguments{
-\item{cex}{}
+\item{x}{a list of dataframes}
 
-\item{list}{of dataframes}
+\item{cumulate}{name of a column}
+
+\item{cex}{}
 }
 \value{
 plot

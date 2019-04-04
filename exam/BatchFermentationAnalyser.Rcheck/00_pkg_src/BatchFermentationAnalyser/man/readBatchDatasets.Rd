@@ -7,7 +7,7 @@
 readBatchDatasets(x)
 }
 \arguments{
-\item{A}{vector of filenames}
+\item{x}{a vector of filenames}
 }
 \value{
 A list of dataframes

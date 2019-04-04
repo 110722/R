@@ -8,9 +8,19 @@ plot_fermdata(x, cumulate = "co2", type = NA, filename = NA,
   width = 480, height = 480, res = 72)
 }
 \arguments{
-\item{res}{}
+\item{x}{a list of dataframes}
 
-\item{list}{of dataframes}
+\item{cumulate}{a name of a column}
+
+\item{type}{the type of saved format}
+
+\item{filename}{the filename}
+
+\item{width}{picture width}
+
+\item{height}{picture height}
+
+\item{res}{picture resolution}
 }
 \value{
 plot

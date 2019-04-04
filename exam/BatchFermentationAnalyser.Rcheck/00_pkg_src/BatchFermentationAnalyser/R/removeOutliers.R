@@ -2,7 +2,7 @@
 #'
 #' gets a list of dataframes and identifies outliers by boxplots and IQRs.
 #' outliers get replaced with NA
-#' @param a list of dataframes
+#' @param x a list of dataframes
 #' @param na.rm
 #'
 #' @return a list of dataframes

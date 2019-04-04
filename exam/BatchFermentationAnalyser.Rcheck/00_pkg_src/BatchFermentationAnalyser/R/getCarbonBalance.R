@@ -4,9 +4,9 @@
 #' data, and a dataframe with information about molweight and carbons of the
 #' substances. CAUTION: names have to be the same.
 #' cumulate = "co2" per default - values get cumulated.
-#' @param list of dataframes
-#' @param dataframe
-#' @param cumulate
+#' @param x a list of dataframes
+#' @param y a dataframe
+#' @param cumulate a column name
 #'
 #' @return a dataframe
 #' @export

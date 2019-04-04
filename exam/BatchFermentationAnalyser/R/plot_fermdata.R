@@ -3,13 +3,13 @@
 #' Takes a list of Dataframes, containing Batch-relevant information, which substance
 #' gets cumulated (co2 per default) and if type and filename are given, saves the results
 #' as a png or jpeg.
-#' @param list of dataframes
-#' @param cumulate
-#' @param type
-#' @param filename
-#' @param width
-#' @param height
-#' @param res
+#' @param x a list of dataframes
+#' @param cumulate a name of a column
+#' @param type the type of saved format
+#' @param filename the filename
+#' @param width picture width
+#' @param height picture height
+#' @param res picture resolution
 #'
 #' @return plot
 #' @export

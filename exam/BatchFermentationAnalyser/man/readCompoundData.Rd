@@ -10,7 +10,7 @@ readCompoundData(x)
 \item{a}{file}
 }
 \value{
-a dataframe
+x a dataframe
 }
 \description{
 reads a file containing the compound data

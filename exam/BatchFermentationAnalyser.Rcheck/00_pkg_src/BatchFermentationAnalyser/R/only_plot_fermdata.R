@@ -2,8 +2,8 @@
 #'
 #' Auxiliary Function for plot_fermdata. Takes List of Dataframes, calculates the
 #' means, cumulates (default value) Co2, and optimizes output for RStudio.
-#' @param list of dataframes
-#' @param cumulate
+#' @param x a list of dataframes
+#' @param cumulate name of a column
 #' @param cex
 #'
 #' @return plot

@@ -7,9 +7,11 @@
 getCarbonBalance(x, y, cumulate = "co2")
 }
 \arguments{
-\item{cumulate}{}
+\item{x}{a list of dataframes}
 
-\item{list}{of dataframes}
+\item{y}{a dataframe}
+
+\item{cumulate}{a column name}
 }
 \value{
 a dataframe
