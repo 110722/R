@@ -1,8 +1,8 @@
 {
-    "path" : "C:/Users/user/Desktop/VM-Zeug/sem2/R/exam/BatchFermentationAnalyser/R",
+    "path" : "C:/Users/user/Desktop/VM-Zeug/sem2/R/exam/BatchFermentationAnalyser",
     "sortOrder" : [
         {
-            "ascending" : true,
+            "ascending" : false,
             "columnIndex" : 2
         }
     ]

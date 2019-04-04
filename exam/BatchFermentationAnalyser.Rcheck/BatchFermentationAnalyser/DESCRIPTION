@@ -1,0 +1,16 @@
+Package: BatchFermentationAnalyser
+Type: Package
+Title: Analyses Batch Fermentation Data
+Version: 0.1.0
+Author: Claudia Haiderer
+Maintainer: The package maintainer <claudia.haiderer@gmail.com>
+Description: Package needs 2 types of Input Data and has to run same folder with
+    input\ & output\.
+    Calculates means, standard deviation and plots data of a given batch. 
+License: GPL
+Encoding: UTF-8
+LazyData: true
+Import: utils (>= 3.5)
+NeedsCompilation: no
+Packaged: 2019-04-04 12:52:38 UTC; user
+Built: R 3.5.1; ; 2019-04-04 12:52:42 UTC; windows

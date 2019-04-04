@@ -1,0 +1,14 @@
+* installing *source* package 'BatchFermentationAnalyser' ...
+** R
+** data
+*** moving datasets to lazyload DB
+Warnung: Objekt 'a' wird durch mehr als einen Datenaufruf erzeugt
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+No man pages found in package  'BatchFermentationAnalyser' 
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (BatchFermentationAnalyser)
+In R CMD INSTALL
