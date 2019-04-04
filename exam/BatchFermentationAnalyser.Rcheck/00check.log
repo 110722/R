@@ -75,8 +75,8 @@ Undocumented code objects:
   'a' 'a_carbon_balance' 'a_cd' 'a_d' 'a_means' 'a_sd' 'a_wo_outlier'
   'basis_dir' 'input_dir' 'originalpar' 'output_dir'
 Undocumented data sets:
-  'a' '.Random.seed' 'a_carbon_balance' 'a_cd' 'a_d' 'a_means' 'a_sd'
-  'a_wo_outlier' 'basis_dir' 'input_dir' 'originalpar' 'output_dir'
+  'a' 'a_cd' 'a_d' 'a_wo_outlier' '.Random.seed' 'a_carbon_balance'
+  'a_means' 'a_sd' 'basis_dir' 'input_dir' 'originalpar' 'output_dir'
 All user-level objects in a package should have documentation entries.
 See chapter 'Writing R documentation files' in the 'Writing R
 Extensions' manual.

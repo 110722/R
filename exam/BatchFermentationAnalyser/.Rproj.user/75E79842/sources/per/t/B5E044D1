@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554404143766.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1042842729",
+    "id" : "B5E044D1",
+    "lastKnownWriteTime" : 1554404163,
+    "last_content_update" : 1554404163,
+    "path" : "C:/Users/user/Desktop/VM-Zeug/sem2/R/exam/BatchFermentationAnalyser/NAMESPACE",
+    "project_path" : "NAMESPACE",
+    "properties" : {
+        "cursorPosition" : "0,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_namespace"
+}
