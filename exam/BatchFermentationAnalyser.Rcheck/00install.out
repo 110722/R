@@ -2,7 +2,6 @@
 ** R
 ** data
 *** moving datasets to lazyload DB
-Warnung: Objekt(e) 'a', 'a_cd', 'a_d', 'a_wo_outlier' werden durch mehr als einen Datenaufruf erzeugt
 ** inst
 ** byte-compile and prepare package for lazy loading
 ** help

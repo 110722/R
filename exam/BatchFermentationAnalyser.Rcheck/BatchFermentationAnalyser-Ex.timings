@@ -1,1 +1,7 @@
 name	user	system	elapsed
+getBatchMeans	0	0	0	
+getBatchSd	0	0	0	
+getCarbonBalance	0.02	0.00	0.02	
+getTestMeans	0	0	0	
+getTestSd	0	0	0	
+only_plot_fermdata	0.01	0.02	0.03	

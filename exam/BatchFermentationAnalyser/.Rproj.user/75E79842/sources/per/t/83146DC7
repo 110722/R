@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554468873410.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "83146DC7",
+    "lastKnownWriteTime" : 3419473789575321445,
+    "last_content_update" : 1554468873410,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "625DE66C",
+        "caption" : "a_carbon_balance",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=a_carbon_balance&cache_key=625DE66C",
+        "displayedObservations" : 10,
+        "environment" : "",
+        "object" : "a_carbon_balance",
+        "preview" : 0,
+        "totalObservations" : 10,
+        "variables" : 8
+    },
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

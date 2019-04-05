@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554405815145.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4078117986",
+    "id" : "C117F885",
+    "lastKnownWriteTime" : 1554404709,
+    "last_content_update" : 1554404709,
+    "path" : "C:/Users/user/Desktop/VM-Zeug/sem2/R/exam/BatchFermentationAnalyser/R/only_plot_fermdata.R",
+    "project_path" : "R/only_plot_fermdata.R",
+    "properties" : {
+        "cursorPosition" : "39,5",
+        "scrollLine" : "28",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

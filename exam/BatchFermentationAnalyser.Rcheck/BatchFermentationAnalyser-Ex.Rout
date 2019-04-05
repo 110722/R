@@ -51,6 +51,348 @@ Type 'q()' to quit R.
 > ### ** Examples
 > 
 > getBatchMeans(a_wo_outlier)
-Error in mean.default(newX[, i], ...) : T used instead of TRUE
-Calls: getBatchMeans -> getTestMeans -> apply -> FUN -> mean.default
+         glucose    biomass       co2   acetate  glycerin pyruvate   ethanol
+0.4   32.6766666  0.2824486 0.1383248 10.176963 1.8788354 0.000000 0.4704621
+13.07 22.2535410  4.1492502 6.9081885  9.963289 0.3819073 0.000000 2.8302481
+14.67 20.0836585  4.7750405 1.4698179 10.222089 0.0000000 0.000000 2.9790218
+16.07 16.6359811  6.2424276 1.4892336 10.436844 0.0000000 0.000000 3.3501368
+17.62 13.5269238  7.1493233 1.8510849 10.437077 0.0000000 0.000000 4.1174151
+19.08  7.6810816  8.4850522 1.9250563 10.453662 0.0000000 2.196855 4.8089136
+20.53  2.8076571 10.1714365 2.0196084 10.827087 0.3879686 2.345276 5.6663224
+22.07  0.3475014 11.3390641 1.6311450 10.681706 0.4565281 2.468523 5.2937388
+        citrate
+0.4   0.0000000
+13.07 0.0000000
+14.67 0.0000000
+16.07 0.0000000
+17.62 0.0000000
+19.08 0.0000000
+20.53 0.4615588
+22.07 0.4546462
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("getBatchMeans", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("getBatchSd")
+> ### * getBatchSd
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: getBatchSd
+> ### Title: getBatchSd
+> ### Aliases: getBatchSd
+> 
+> ### ** Examples
+> 
+> getBatchSd(a_wo_outlier)
+         glucose     biomass         co2    acetate    glycerin    pyruvate
+0.4   1.15244370 0.000893166 0.003682631 0.34213603 0.034676353 0.000000000
+13.07 0.69281507 0.103364923 0.174343706 0.40240090 0.011159109 0.000000000
+14.67 0.64904514 0.046472699 0.033846132 0.35666691 0.000000000 0.000000000
+16.07 0.32343074 0.229808863 0.060982225 0.42496030 0.000000000 0.000000000
+17.62 0.23027686 0.286682515 0.055254285 0.46718911 0.000000000 0.000000000
+19.08 0.17168901 0.189510942 0.010212938 0.11264486 0.000000000 0.003425692
+20.53 0.08819084 0.391339912 0.017278846 0.07908678 0.012065220 0.039423004
+22.07 0.01246835 0.179324210 0.069451053 0.23742906 0.007267382 0.008502809
+         ethanol     citrate
+0.4   0.01983473 0.000000000
+13.07 0.07205965 0.000000000
+14.67 0.11116445 0.000000000
+16.07 0.02784377 0.000000000
+17.62 0.06379474 0.000000000
+19.08 0.10222072 0.000000000
+20.53 0.20405015 0.002122444
+22.07 0.09923157 0.011348529
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("getBatchSd", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("getCarbonBalance")
+> ### * getCarbonBalance
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: getCarbonBalance
+> ### Title: getCarbonBalance
+> ### Aliases: getCarbonBalance
+> 
+> ### ** Examples
+> 
+> getCarbonBalance(a_wo_outlier, a_cd, cumulate="co2")
+                      0.4      13.07     14.67     16.07     17.62      19.08
+glucose       1.088134085 0.74104366 0.6687865 0.5539787 0.4504470 0.25578027
+biomass       0.010222535 0.15017192 0.1728209 0.2259293 0.2587522 0.30709563
+co2           0.003143031 0.16011164 0.1935090 0.2273475 0.2694081 0.31314942
+acetate       0.344981796 0.33773861 0.3465115 0.3537913 0.3537992 0.35436143
+glycerin      0.061199851 0.01243998 0.0000000 0.0000000 0.0000000 0.00000000
+pyruvate      0.000000000 0.00000000 0.0000000 0.0000000 0.0000000 0.07575361
+ethanol       0.020419360 0.12284063 0.1292978 0.1454052 0.1787073 0.20872021
+citrate       0.000000000 0.00000000 0.0000000 0.0000000 0.0000000 0.00000000
+carbonsum     1.528100657 1.52434643 1.5109257 1.5064522 1.5111138 1.51486057
+carbonbalance 1.000000000 0.99754321 0.9887606 0.9858331 0.9888837 0.99133559
+                   20.53      22.07
+glucose       0.09349508 0.01157181
+biomass       0.36813017 0.41038958
+co2           0.35903918 0.39610223
+acetate       0.36701989 0.36209171
+glycerin      0.01263741 0.01487062
+pyruvate      0.08087158 0.08512149
+ethanol       0.24593413 0.22976297
+citrate       0.01442371 0.01420769
+carbonsum     1.54155115 1.52411811
+carbonbalance 1.00880210 0.99739379
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("getCarbonBalance", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("getTestMeans")
+> ### * getTestMeans
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: getTestMeans
+> ### Title: getTestMeans
+> ### Aliases: getTestMeans
+> 
+> ### ** Examples
+> 
+> getTestMeans(a_wo_outlier)
+[[1]]
+      hour    glucose    biomass        co2    acetate   glycerin   pyruvate 
+ 0.4000000 32.6766666  0.2824486  0.1383248 10.1769630  1.8788354  0.0000000 
+   ethanol    citrate 
+ 0.4704621  0.0000000 
+
+[[2]]
+      hour    glucose    biomass        co2    acetate   glycerin   pyruvate 
+13.0700000 22.2535410  4.1492502  6.9081885  9.9632889  0.3819073  0.0000000 
+   ethanol    citrate 
+ 2.8302481  0.0000000 
+
+[[3]]
+     hour   glucose   biomass       co2   acetate  glycerin  pyruvate   ethanol 
+14.670000 20.083659  4.775040  1.469818 10.222089  0.000000  0.000000  2.979022 
+  citrate 
+ 0.000000 
+
+[[4]]
+     hour   glucose   biomass       co2   acetate  glycerin  pyruvate   ethanol 
+16.070000 16.635981  6.242428  1.489234 10.436844  0.000000  0.000000  3.350137 
+  citrate 
+ 0.000000 
+
+[[5]]
+     hour   glucose   biomass       co2   acetate  glycerin  pyruvate   ethanol 
+17.620000 13.526924  7.149323  1.851085 10.437077  0.000000  0.000000  4.117415 
+  citrate 
+ 0.000000 
+
+[[6]]
+     hour   glucose   biomass       co2   acetate  glycerin  pyruvate   ethanol 
+19.080000  7.681082  8.485052  1.925056 10.453662  0.000000  2.196855  4.808914 
+  citrate 
+ 0.000000 
+
+[[7]]
+      hour    glucose    biomass        co2    acetate   glycerin   pyruvate 
+20.5300000  2.8076571 10.1714365  2.0196084 10.8270867  0.3879686  2.3452759 
+   ethanol    citrate 
+ 5.6663224  0.4615588 
+
+[[8]]
+      hour    glucose    biomass        co2    acetate   glycerin   pyruvate 
+22.0700000  0.3475014 11.3390641  1.6311450 10.6817056  0.4565281  2.4685232 
+   ethanol    citrate 
+ 5.2937388  0.4546462 
+
+> 
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("getTestMeans", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("getTestSd")
+> ### * getTestSd
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: getTestSd
+> ### Title: getTestSd
+> ### Aliases: getTestSd
+> 
+> ### ** Examples
+> 
+> getTestSd(a_wo_outlier)
+[[1]]
+       hour     glucose     biomass         co2     acetate    glycerin 
+0.000000000 1.152443696 0.000893166 0.003682631 0.342136032 0.034676353 
+   pyruvate     ethanol     citrate 
+0.000000000 0.019834726 0.000000000 
+
+[[2]]
+      hour    glucose    biomass        co2    acetate   glycerin   pyruvate 
+0.00000000 0.69281507 0.10336492 0.17434371 0.40240090 0.01115911 0.00000000 
+   ethanol    citrate 
+0.07205965 0.00000000 
+
+[[3]]
+      hour    glucose    biomass        co2    acetate   glycerin   pyruvate 
+0.00000000 0.64904514 0.04647270 0.03384613 0.35666691 0.00000000 0.00000000 
+   ethanol    citrate 
+0.11116445 0.00000000 
+
+[[4]]
+      hour    glucose    biomass        co2    acetate   glycerin   pyruvate 
+0.00000000 0.32343074 0.22980886 0.06098222 0.42496030 0.00000000 0.00000000 
+   ethanol    citrate 
+0.02784377 0.00000000 
+
+[[5]]
+      hour    glucose    biomass        co2    acetate   glycerin   pyruvate 
+0.00000000 0.23027686 0.28668252 0.05525429 0.46718911 0.00000000 0.00000000 
+   ethanol    citrate 
+0.06379474 0.00000000 
+
+[[6]]
+       hour     glucose     biomass         co2     acetate    glycerin 
+0.000000000 0.171689013 0.189510942 0.010212938 0.112644864 0.000000000 
+   pyruvate     ethanol     citrate 
+0.003425692 0.102220716 0.000000000 
+
+[[7]]
+       hour     glucose     biomass         co2     acetate    glycerin 
+0.000000000 0.088190843 0.391339912 0.017278846 0.079086777 0.012065220 
+   pyruvate     ethanol     citrate 
+0.039423004 0.204050152 0.002122444 
+
+[[8]]
+       hour     glucose     biomass         co2     acetate    glycerin 
+0.000000000 0.012468346 0.179324210 0.069451053 0.237429057 0.007267382 
+   pyruvate     ethanol     citrate 
+0.008502809 0.099231572 0.011348529 
+
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("getTestSd", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("only_plot_fermdata")
+> ### * only_plot_fermdata
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: only_plot_fermdata
+> ### Title: only_plot_fermdata
+> ### Aliases: only_plot_fermdata
+> 
+> ### ** Examples
+> 
+> only_plot_fermdata(a_wo_outlier, cumulate="co2", cex=0.5)
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("only_plot_fermdata", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("plot_fermdata")
+> ### * plot_fermdata
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: plot_fermdata
+> ### Title: plot_fermdata
+> ### Aliases: plot_fermdata
+> 
+> ### ** Examples
+> 
+> plot_fermdata(a_wo_outlier, cumulate="co2", type = "png", filename = paste(output_dir, "a.png", sep = ""), width = 1200,height = 800)
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Error in paste(output_dir, "a.png", sep = "") : 
+  object 'output_dir' not found
+Calls: plot_fermdata -> png -> checkIntFormat -> gsub -> paste
 Execution halted

@@ -72,43 +72,13 @@ These lines will be truncated in the PDF manual.
 * checking Rd cross-references ... OK
 * checking for missing documentation entries ... WARNING
 Undocumented code objects:
-  'a' 'a_carbon_balance' 'a_cd' 'a_d' 'a_means' 'a_sd' 'a_wo_outlier'
-  'basis_dir' 'input_dir' 'originalpar' 'output_dir'
+  'a' 'a_cd' 'a_d' 'a_wo_outlier'
 Undocumented data sets:
-  'a' 'a_cd' 'a_d' 'a_wo_outlier' '.Random.seed' 'a_carbon_balance'
-  'a_means' 'a_sd' 'basis_dir' 'input_dir' 'originalpar' 'output_dir'
+  'a' 'a_cd' 'a_d' 'a_wo_outlier'
 All user-level objects in a package should have documentation entries.
 See chapter 'Writing R documentation files' in the 'Writing R
 Extensions' manual.
-* checking for code/documentation mismatches ... WARNING
-Codoc mismatches from documentation object 'getBatchMeans':
-getBatchMeans
-  Code: function(x, na.rm = T)
-  Docs: function(x, na.rm = TRUE)
-  Mismatches in argument default values:
-    Name: 'na.rm' Code: T Docs: TRUE
-
-Codoc mismatches from documentation object 'getBatchSd':
-getBatchSd
-  Code: function(x, na.rm = T)
-  Docs: function(x, na.rm = TRUE)
-  Mismatches in argument default values:
-    Name: 'na.rm' Code: T Docs: TRUE
-
-Codoc mismatches from documentation object 'getTestMeans':
-getTestMeans
-  Code: function(x, na.rm = T)
-  Docs: function(x, na.rm = TRUE)
-  Mismatches in argument default values:
-    Name: 'na.rm' Code: T Docs: TRUE
-
-Codoc mismatches from documentation object 'getTestSd':
-getTestSd
-  Code: function(x, na.rm = T)
-  Docs: function(x, na.rm = TRUE)
-  Mismatches in argument default values:
-    Name: 'na.rm' Code: T Docs: TRUE
-
+* checking for code/documentation mismatches ... OK
 * checking Rd \usage sections ... WARNING
 Undocumented arguments in documentation object 'readCompoundData'
   'x'
@@ -148,15 +118,52 @@ Running examples in 'BatchFermentationAnalyser-Ex.R' failed
 The error most likely occurred in:
 
 > base::assign(".ptime", proc.time(), pos = "CheckExEnv")
-> ### Name: getBatchMeans
-> ### Title: getBatchMeans
-> ### Aliases: getBatchMeans
+> ### Name: plot_fermdata
+> ### Title: plot_fermdata
+> ### Aliases: plot_fermdata
 > 
 > ### ** Examples
 > 
-> getBatchMeans(a_wo_outlier)
-Error in mean.default(newX[, i], ...) : T used instead of TRUE
-Calls: getBatchMeans -> getTestMeans -> apply -> FUN -> mean.default
+> plot_fermdata(a_wo_outlier, cumulate="co2", type = "png", filename = paste(output_dir, "a.png", sep = ""), width = 1200,height = 800)
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
+  zero-length arrow is of indeterminate angle and so skipped
+Error in paste(output_dir, "a.png", sep = "") : 
+  object 'output_dir' not found
+Calls: plot_fermdata -> png -> checkIntFormat -> gsub -> paste
 Execution halted
 * DONE
-Status: 1 ERROR, 4 WARNINGs, 2 NOTEs
+Status: 1 ERROR, 3 WARNINGs, 2 NOTEs
