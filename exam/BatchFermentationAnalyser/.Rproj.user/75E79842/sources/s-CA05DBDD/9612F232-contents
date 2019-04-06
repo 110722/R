@@ -1,8 +1,8 @@
 #' getTestSd
 #'
 #' Auxiliary Function for getBatchSd.
-#' @param a list of dataframes
-#' @param na.rm
+#' @param x a list of dataframes
+#' @param na.rm indicator of missingness
 #'
 #' @return a dataframe
 #' @export

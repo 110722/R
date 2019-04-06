@@ -16,5 +16,5 @@ x a dataframe
 reads a file containing the compound data
 }
 \examples{
-readCompoundData("inst/extdata/A/Compounds.txt")
+readCompoundData(c)
 }

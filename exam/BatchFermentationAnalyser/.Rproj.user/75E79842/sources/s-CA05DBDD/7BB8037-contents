@@ -1,0 +1,15 @@
+#' c
+#'
+#' A filename.
+#'
+#'  @format
+#'  A filename.
+#'
+#'  @name
+#'  c
+NULL
+
+
+# basis_dir <- getwd()
+# c <- paste(basis_dir, "/inst/extdata/A/Compounds.txt", sep="")
+# save(file="data/c.rda", list="c")

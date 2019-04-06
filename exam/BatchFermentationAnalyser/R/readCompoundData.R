@@ -7,7 +7,7 @@
 #' @export
 #'
 #' @examples
-#' readCompoundData("inst/extdata/A/Compounds.txt")
+#' readCompoundData(c)
 
 
 readCompoundData <- function(x) {

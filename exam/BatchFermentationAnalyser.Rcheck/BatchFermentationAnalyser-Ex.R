@@ -146,7 +146,7 @@ base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 
 ### ** Examples
 
-plot_fermdata(a_wo_outlier, cumulate="co2", type = "png", filename = paste(output_dir, "a.png", sep = ""), width = 1200,height = 800)
+plot_fermdata(a_wo_outlier, cumulate="co2", type = NA, filename = NA)
 
 
 
@@ -184,7 +184,7 @@ base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 
 ### ** Examples
 
-readCompoundData("inst/extdata/A/Compounds.txt")
+readCompoundData(c)
 
 
 
@@ -222,7 +222,7 @@ base::assign(".ptime", proc.time(), pos = "CheckExEnv")
 
 ### ** Examples
 
-saveCarbonBalance(a_carbon_balance, paste(output_dir, "a_carbon_balance.csv", sep = ""))
+saveCarbonBalance(a_carbon_balance, "a_carbon_balance.csv")
 
 
 

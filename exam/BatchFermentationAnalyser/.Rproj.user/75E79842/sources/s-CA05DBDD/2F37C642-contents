@@ -15,8 +15,7 @@
 #' @export
 #'
 #' @examples
-#' plot_fermdata(a_wo_outlier, cumulate="co2", type = "png", filename = paste(output_dir, "a.png", sep = ""), width = 1200,height = 800)
-
+#' plot_fermdata(a_wo_outlier, cumulate="co2", type = NA, filename = NA)
 
 plot_fermdata <-
   function(x,

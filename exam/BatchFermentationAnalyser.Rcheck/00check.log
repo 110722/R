@@ -63,18 +63,13 @@ Consider adding
 to your NAMESPACE file.
 * checking Rd files ... OK
 * checking Rd metadata ... OK
-* checking Rd line widths ... NOTE
-Rd file 'plot_fermdata.Rd':
-  \examples lines wider than 100 characters:
-     plot_fermdata(a_wo_outlier, cumulate="co2", type = "png", filename = paste(output_dir, "a.png", sep = ""), width = 1200,height = 800)
-
-These lines will be truncated in the PDF manual.
+* checking Rd line widths ... OK
 * checking Rd cross-references ... OK
 * checking for missing documentation entries ... WARNING
 Undocumented code objects:
-  'a' 'a_cd' 'a_d' 'a_wo_outlier'
+  'a' 'a_carbon_balance' 'a_cd' 'a_d' 'a_wo_outlier' 'c'
 Undocumented data sets:
-  'a' 'a_cd' 'a_d' 'a_wo_outlier'
+  'a' 'a_carbon_balance' 'a_cd' 'a_d' 'a_wo_outlier' 'c'
 All user-level objects in a package should have documentation entries.
 See chapter 'Writing R documentation files' in the 'Writing R
 Extensions' manual.
@@ -90,80 +85,11 @@ entries, and all their arguments documented.
 The \usage entries must correspond to syntactically valid R code.
 See chapter 'Writing R documentation files' in the 'Writing R
 Extensions' manual.
-* checking Rd contents ... WARNING
-Argument items with no description in Rd object 'getBatchMeans':
-  'na.rm'
-
-Argument items with no description in Rd object 'getBatchSd':
-  'na.rm'
-
-Argument items with no description in Rd object 'getTestMeans':
-  'na.rm'
-
-Argument items with no description in Rd object 'getTestSd':
-  'na.rm'
-
-Argument items with no description in Rd object 'only_plot_fermdata':
-  'cex'
-
-Argument items with no description in Rd object 'removeOutliers':
-  'na.rm'
-
+* checking Rd contents ... OK
 * checking for unstated dependencies in examples ... OK
 * checking contents of 'data' directory ... OK
 * checking data for non-ASCII characters ... OK
 * checking data for ASCII and uncompressed saves ... OK
-* checking examples ... ERROR
-Running examples in 'BatchFermentationAnalyser-Ex.R' failed
-The error most likely occurred in:
-
-> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
-> ### Name: plot_fermdata
-> ### Title: plot_fermdata
-> ### Aliases: plot_fermdata
-> 
-> ### ** Examples
-> 
-> plot_fermdata(a_wo_outlier, cumulate="co2", type = "png", filename = paste(output_dir, "a.png", sep = ""), width = 1200,height = 800)
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
-  zero-length arrow is of indeterminate angle and so skipped
-Error in paste(output_dir, "a.png", sep = "") : 
-  object 'output_dir' not found
-Calls: plot_fermdata -> png -> checkIntFormat -> gsub -> paste
-Execution halted
+* checking examples ... OK
 * DONE
-Status: 1 ERROR, 3 WARNINGs, 2 NOTEs
+Status: 2 WARNINGs, 1 NOTE

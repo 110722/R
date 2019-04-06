@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples
-#' saveCarbonBalance(a_carbon_balance, paste(output_dir, "a_carbon_balance.csv", sep = ""))
+#' saveCarbonBalance(a_carbon_balance, "a_carbon_balance.csv")
 
 
 saveCarbonBalance <- function(x,y) {

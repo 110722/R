@@ -11,7 +11,7 @@ only_plot_fermdata(x, cumulate = "co2", cex = 0.5)
 
 \item{cumulate}{name of a column}
 
-\item{cex}{}
+\item{cex}{graphical parameter}
 }
 \value{
 plot

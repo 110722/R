@@ -2,7 +2,7 @@
 #'
 #' Auxiliary Function for getBatchMeans.
 #' @param x a list of dataframes
-#' @param na.rm
+#' @param na.rm indicator of missingness
 #'
 #' @return dataframe
 #' @export

@@ -1,21 +1,21 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1554389265908.000,
+    "created" : 1554543835062.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "1068268930",
-    "id" : "873B9ED1",
-    "lastKnownWriteTime" : 1554389270,
-    "last_content_update" : 1554389270007,
+    "hash" : "3435066228",
+    "id" : "9612F232",
+    "lastKnownWriteTime" : 1554543838,
+    "last_content_update" : 1554543838869,
     "path" : "C:/Users/user/Desktop/VM-Zeug/sem2/R/exam/BatchFermentationAnalyser/R/getTestSd.R",
     "project_path" : "R/getTestSd.R",
     "properties" : {
-        "cursorPosition" : "12,37",
+        "cursorPosition" : "4,40",
         "scrollLine" : "0"
     },
-    "relative_order" : 5,
+    "relative_order" : 12,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_source"

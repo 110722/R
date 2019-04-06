@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554543571758.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3115813951",
+    "id" : "E0728354",
+    "lastKnownWriteTime" : 1554543681,
+    "last_content_update" : 1554543681894,
+    "path" : "C:/Users/user/Desktop/VM-Zeug/sem2/R/exam/BatchFermentationAnalyser/R/saveCarbonBalance.R",
+    "project_path" : "R/saveCarbonBalance.R",
+    "properties" : {
+        "cursorPosition" : "10,39",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554542539626.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9010A4B0",
+    "lastKnownWriteTime" : 1554543480,
+    "last_content_update" : 1554543480180,
+    "path" : "C:/Users/user/Desktop/VM-Zeug/sem2/R/exam/BatchFermentationAnalyser/R/a_carbon_balance.R",
+    "project_path" : "R/a_carbon_balance.R",
+    "properties" : {
+        "cursorPosition" : "106,65",
+        "scrollLine" : "87",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 16,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

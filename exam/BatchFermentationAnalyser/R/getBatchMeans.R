@@ -3,7 +3,7 @@
 #' takes a list of dataframes containing batch information and time
 #' and returns one dataframe of the Means of these data, sorted by hour
 #' @param x a list of dataframes
-#' @param na.rm
+#' @param na.rm indicator of missingness
 #'
 #' @return dataframe with batch-means
 #' @export

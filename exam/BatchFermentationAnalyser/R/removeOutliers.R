@@ -3,7 +3,7 @@
 #' gets a list of dataframes and identifies outliers by boxplots and IQRs.
 #' outliers get replaced with NA
 #' @param x a list of dataframes
-#' @param na.rm
+#' @param na.rm indicator of missingness, default=true
 #'
 #' @return a list of dataframes
 #' @export

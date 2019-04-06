@@ -355,7 +355,7 @@ Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rowna
 > 
 > ### ** Examples
 > 
-> plot_fermdata(a_wo_outlier, cumulate="co2", type = "png", filename = paste(output_dir, "a.png", sep = ""), width = 1200,height = 800)
+> plot_fermdata(a_wo_outlier, cumulate="co2", type = NA, filename = NA)
 Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
   zero-length arrow is of indeterminate angle and so skipped
 Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
@@ -392,7 +392,260 @@ Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rowna
   zero-length arrow is of indeterminate angle and so skipped
 Warning in arrows((as.numeric(rownames(x_means))), gHigh[, i], (as.numeric(rownames(x_means))),  :
   zero-length arrow is of indeterminate angle and so skipped
-Error in paste(output_dir, "a.png", sep = "") : 
-  object 'output_dir' not found
-Calls: plot_fermdata -> png -> checkIntFormat -> gsub -> paste
-Execution halted
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("plot_fermdata", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("readBatchDatasets")
+> ### * readBatchDatasets
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: readBatchDatasets
+> ### Title: readBatchDatasets
+> ### Aliases: readBatchDatasets
+> 
+> ### ** Examples
+> 
+> readBatchDatasets(a)
+[[1]]
+  hour  glucose   biomass       co2  acetate glycerin pyruvate   ethanol
+1  0.4 31.86124 0.2815441 0.1415887 10.01342 1.928297        0 0.4872410
+2  0.4 33.12161 0.2833300 0.1407521  9.88105 1.877168        0 0.4512371
+3  0.4 31.62642 0.2824718 0.1334860 10.66292 1.857764        0 0.4879043
+4  0.4 34.09739 0.2768318 0.1374724 10.15045 1.852113        0 0.4554659
+  citrate
+1       0
+2       0
+3       0
+4       0
+
+[[2]]
+   hour  glucose  biomass      co2   acetate  glycerin pyruvate  ethanol
+1 13.07 22.91069 4.069412 7.020858  9.674773 0.3920278        0 2.807166
+2 13.07 21.63377 4.196948 7.071831 10.002521 0.3863920        0 2.887573
+3 13.07 21.67659 4.272295 6.852313 10.518005 0.3831012        0 2.738385
+4 13.07 22.79312 4.058346 6.687752  9.657857 0.3661081        0 2.887868
+  citrate
+1       0
+2       0
+3       0
+4       0
+
+[[3]]
+   hour  glucose  biomass      co2   acetate glycerin pyruvate  ethanol citrate
+1 14.67 20.86391 4.724370 1.429560 10.457801        0        0 2.861888       0
+2 14.67 19.39926 4.785076 1.463772  9.739898        0        0 3.124981       0
+3 14.67 20.33739 4.815675 1.511777 10.523077        0        0 2.993183       0
+4 14.67 19.73407 4.409109 1.474162 10.167579        0        0 2.936036       0
+
+[[4]]
+   hour  glucose  biomass      co2   acetate glycerin pyruvate  ethanol citrate
+1 16.07 16.54701 6.367091 1.546327  9.827428        0        0 3.382263       0
+2 16.07 16.94930 6.479742 1.483488 10.464019        0        0 3.335182       0
+3 16.07 16.22167 5.958814 1.520768 10.719465        0        0 3.332966       0
+4 16.07 16.82594 6.164064 1.406352 10.736466        0        0 3.663528       0
+
+[[5]]
+   hour  glucose  biomass      co2   acetate glycerin pyruvate  ethanol citrate
+1 17.62 13.43871 7.471305 1.773253 10.167291        0        0 4.025214       0
+2 17.62 13.54264 7.283722 1.852845 10.796048        0        0 4.124610       0
+3 17.62 13.83560 6.819438 1.879006  9.918578        0        0 4.155260       0
+4 17.62 13.29076 7.022828 1.899236 10.866392        0        0 4.164576       0
+
+[[6]]
+   hour  glucose  biomass      co2   acetate glycerin pyruvate  ethanol citrate
+1 19.08 7.535741 8.690116 1.922906  9.881697        0 2.199740 4.673493       0
+2 19.08 7.550020 8.384309 1.936173 10.382422        0 2.193069 4.869756       0
+3 19.08 7.896520 8.591166 2.029142 10.583529        0 2.158943 4.789081       0
+4 19.08 7.742046 8.274618 1.916090 10.395035        0 2.197756 4.903325       0
+
+[[7]]
+   hour  glucose   biomass      co2   acetate  glycerin pyruvate  ethanol
+1 20.53 2.780828 10.567782 2.152382  9.961934 0.3728911 2.307804 5.456281
+2 20.53 2.919388  9.861509 2.028971 10.735898 0.3844928 2.371586 5.545404
+3 20.53 2.708088  9.809981 2.030185 10.876939 0.3936965 2.386239 5.756293
+4 20.53 2.822325 10.446474 1.999669 10.868424 0.4007939 2.315474 5.907312
+    citrate
+1 0.4607323
+2 0.4416296
+3 0.4599739
+4 0.4639702
+
+[[8]]
+   hour   glucose  biomass      co2  acetate  glycerin pyruvate  ethanol
+1 22.07 0.3518553 11.48439 1.695305 10.81338 0.4462321 2.545262 5.310101
+2 22.07 0.3365559 11.48292 1.686162 10.40762 0.4602888 2.477596 5.427397
+3 22.07 0.3384300 11.11434 1.560942 11.43937 0.4627060 2.460737 5.227545
+4 22.07 0.3631644 11.27461 1.582171 10.82412 0.4568856 2.467237 5.209912
+    citrate
+1 0.4444821
+2 0.4700621
+3 0.4480443
+4 0.4559962
+
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("readBatchDatasets", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("readCompoundData")
+> ### * readCompoundData
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: readCompoundData
+> ### Title: readCompoundData
+> ### Aliases: readCompoundData
+> 
+> ### ** Examples
+> 
+> readCompoundData(c)
+         molweight carbons
+glucose     180.18       6
+biomass      27.63       1
+ethanol      46.08       2
+pyruvate     87.00       3
+acetate      59.00       2
+co2          44.01       1
+glycerin     92.10       3
+citrate     192.00       6
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("readCompoundData", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("removeOutliers")
+> ### * removeOutliers
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: removeOutliers
+> ### Title: removeOutliers
+> ### Aliases: removeOutliers
+> 
+> ### ** Examples
+> 
+> removeOutliers(a_d)
+[[1]]
+  hour  glucose   biomass       co2  acetate glycerin pyruvate   ethanol
+1  0.4 31.86124 0.2815441 0.1415887 10.01342 1.928297        0 0.4872410
+2  0.4 33.12161 0.2833300 0.1407521  9.88105 1.877168        0 0.4512371
+3  0.4 31.62642 0.2824718 0.1334860 10.66292 1.857764        0 0.4879043
+4  0.4 34.09739        NA 0.1374724 10.15045 1.852113        0 0.4554659
+  citrate
+1       0
+2       0
+3       0
+4       0
+
+[[2]]
+   hour  glucose  biomass      co2   acetate  glycerin pyruvate  ethanol
+1 13.07 22.91069 4.069412 7.020858  9.674773 0.3920278        0 2.807166
+2 13.07 21.63377 4.196948 7.071831 10.002521 0.3863920        0 2.887573
+3 13.07 21.67659 4.272295 6.852313 10.518005 0.3831012        0 2.738385
+4 13.07 22.79312 4.058346 6.687752  9.657857 0.3661081        0 2.887868
+  citrate
+1       0
+2       0
+3       0
+4       0
+
+[[3]]
+   hour  glucose  biomass      co2   acetate glycerin pyruvate  ethanol citrate
+1 14.67 20.86391 4.724370 1.429560 10.457801        0        0 2.861888       0
+2 14.67 19.39926 4.785076 1.463772  9.739898        0        0 3.124981       0
+3 14.67 20.33739 4.815675 1.511777 10.523077        0        0 2.993183       0
+4 14.67 19.73407       NA 1.474162 10.167579        0        0 2.936036       0
+
+[[4]]
+   hour  glucose  biomass      co2   acetate glycerin pyruvate  ethanol citrate
+1 16.07 16.54701 6.367091 1.546327  9.827428        0        0 3.382263       0
+2 16.07 16.94930 6.479742 1.483488 10.464019        0        0 3.335182       0
+3 16.07 16.22167 5.958814 1.520768 10.719465        0        0 3.332966       0
+4 16.07 16.82594 6.164064 1.406352 10.736466        0        0       NA       0
+
+[[5]]
+   hour  glucose  biomass      co2   acetate glycerin pyruvate  ethanol citrate
+1 17.62 13.43871 7.471305 1.773253 10.167291        0        0 4.025214       0
+2 17.62 13.54264 7.283722 1.852845 10.796048        0        0 4.124610       0
+3 17.62 13.83560 6.819438 1.879006  9.918578        0        0 4.155260       0
+4 17.62 13.29076 7.022828 1.899236 10.866392        0        0 4.164576       0
+
+[[6]]
+   hour  glucose  biomass      co2  acetate glycerin pyruvate  ethanol citrate
+1 19.08 7.535741 8.690116 1.922906       NA        0 2.199740 4.673493       0
+2 19.08 7.550020 8.384309 1.936173 10.38242        0 2.193069 4.869756       0
+3 19.08 7.896520 8.591166       NA 10.58353        0       NA 4.789081       0
+4 19.08 7.742046 8.274618 1.916090 10.39503        0 2.197756 4.903325       0
+
+[[7]]
+   hour  glucose   biomass      co2  acetate  glycerin pyruvate  ethanol
+1 20.53 2.780828 10.567782       NA       NA 0.3728911 2.307804 5.456281
+2 20.53 2.919388  9.861509 2.028971 10.73590 0.3844928 2.371586 5.545404
+3 20.53 2.708088  9.809981 2.030185 10.87694 0.3936965 2.386239 5.756293
+4 20.53 2.822325 10.446474 1.999669 10.86842 0.4007939 2.315474 5.907312
+    citrate
+1 0.4607323
+2        NA
+3 0.4599739
+4 0.4639702
+
+[[8]]
+   hour   glucose  biomass      co2  acetate  glycerin pyruvate  ethanol
+1 22.07 0.3518553 11.48439 1.695305 10.81338 0.4462321       NA 5.310101
+2 22.07 0.3365559 11.48292 1.686162 10.40762 0.4602888 2.477596 5.427397
+3 22.07 0.3384300 11.11434 1.560942       NA 0.4627060 2.460737 5.227545
+4 22.07 0.3631644 11.27461 1.582171 10.82412 0.4568856 2.467237 5.209912
+    citrate
+1 0.4444821
+2 0.4700621
+3 0.4480443
+4 0.4559962
+
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("removeOutliers", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> cleanEx()
+> nameEx("saveCarbonBalance")
+> ### * saveCarbonBalance
+> 
+> flush(stderr()); flush(stdout())
+> 
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: saveCarbonBalance
+> ### Title: saveCarbonBalance
+> ### Aliases: saveCarbonBalance
+> 
+> ### ** Examples
+> 
+> saveCarbonBalance(a_carbon_balance, "a_carbon_balance.csv")
+> 
+> 
+> 
+> base::assign(".dptime", (proc.time() - get(".ptime", pos = "CheckExEnv")), pos = "CheckExEnv")
+> base::cat("saveCarbonBalance", base::get(".format_ptime", pos = 'CheckExEnv')(get(".dptime", pos = "CheckExEnv")), "\n", file=base::get(".ExTimings", pos = 'CheckExEnv'), append=TRUE, sep="\t")
+> ### * <FOOTER>
+> ###
+> cleanEx()
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  0.29 0.05 0.37 NA NA 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')

@@ -1,8 +1,8 @@
 #' getTestMeans
 #'
 #' Auxiliary Function for getBatchMeans.
-#' @param list of dataframes
-#' @param na.rm
+#' @param x a list of dataframes
+#' @param na.rm indicator of missingness
 #'
 #' @return dataframe
 #' @export

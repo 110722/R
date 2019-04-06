@@ -9,7 +9,7 @@ getTestMeans(x, na.rm = TRUE)
 \arguments{
 \item{x}{a list of dataframes}
 
-\item{na.rm}{}
+\item{na.rm}{indicator of missingness}
 }
 \value{
 dataframe

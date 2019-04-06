@@ -4,7 +4,7 @@
 #' and returns one dataframe with the standard deviations
 #' of these data, sorted by hour
 #' @param x a list of dataframes
-#' @param na.rm
+#' @param na.rm indicator of missingness
 #'
 #' @return dataframe
 #' @export

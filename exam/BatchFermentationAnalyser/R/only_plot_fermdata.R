@@ -4,7 +4,7 @@
 #' means, cumulates (default value) Co2, and optimizes output for RStudio.
 #' @param x a list of dataframes
 #' @param cumulate name of a column
-#' @param cex
+#' @param cex graphical parameter
 #'
 #' @return plot
 #' @export

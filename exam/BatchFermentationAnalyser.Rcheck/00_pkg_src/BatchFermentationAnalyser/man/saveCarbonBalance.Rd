@@ -18,5 +18,5 @@ a .csv
 Function to save a dataframe as a csv, sep="," and dec="."
 }
 \examples{
-saveCarbonBalance(a_carbon_balance, paste(output_dir, "a_carbon_balance.csv", sep = ""))
+saveCarbonBalance(a_carbon_balance, "a_carbon_balance.csv")
 }

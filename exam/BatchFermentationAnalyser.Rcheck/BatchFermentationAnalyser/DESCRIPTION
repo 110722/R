@@ -14,5 +14,5 @@ Import: graphics (>= 3.5) grDevices (>= 3.5) stats (>= 3.5) utils (>=
         3.5)
 RoxygenNote: 6.1.1
 NeedsCompilation: no
-Packaged: 2019-04-05 12:47:34 UTC; user
-Built: R 3.5.1; ; 2019-04-05 12:47:36 UTC; windows
+Packaged: 2019-04-06 09:45:24 UTC; user
+Built: R 3.5.1; ; 2019-04-06 09:45:29 UTC; windows
